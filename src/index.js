@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import BasicStates from './BasicStates';
+import State2 from "./State2"
+import Title from './Title';
+import ContextParent from "./ContextParent"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BasicStates />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+ReactDOM.render(<State2 />, document.querySelector("#state2"))
+
+ReactDOM.render(<Title />, document.querySelector("#title"))
+
+ReactDOM.render(<ContextParent />, document.querySelector("#context"))
+
